@@ -31,8 +31,13 @@ class CadrastraOperacoes : AppCompatActivity() {
         editTextDescricao = findViewById<EditText>(R.id.editTextDescricao)
         editTextValor = findViewById<EditText>(R.id.editTextValor)
         buttonSalvar = findViewById<Button>(R.id.buttonSalvar)
+        val btnVoltar = findViewById<Button>(R.id.buttonVoltarCadastro)
         buttonSalvar.setOnClickListener {
             salvarTransacao()
+        }
+
+        btnVoltar.setOnClickListener {
+            finish()
         }
 
         dao = TransactionDAO(this)

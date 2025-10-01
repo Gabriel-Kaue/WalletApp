@@ -25,7 +25,7 @@ class TransactionDAO (private val context: Context) {
     fun getAllTransactions(): List<Transaction> {
         val db = dbHelper.readableDatabase
         val transactions = mutableListOf<Transaction>()
-        val cursor: Cursor = db.query(DBHelper.TABLE_NAME, null, null, null, null, null, null)
+        val cursor: Cursor = db.query(DBHelper.TABLE_NAME, null, null, null, null, null, "id DESC")
 
         while(cursor.moveToNext()){
             val id = cursor.getLong(cursor.getColumnIndexOrThrow("id"))
@@ -46,7 +46,7 @@ class TransactionDAO (private val context: Context) {
         val db = dbHelper.readableDatabase
         var saldo = 0.0
 
-        val sql = "SELECT" +
+        val sql = "SELECT " +
                 "SUM(CASE WHEN tipo = 'CREDITO' THEN valor ELSE 0 END) - " +
                 "SUM(CASE WHEN tipo = 'DEBITO' THEN valor ELSE 0 END) " +
                 "FROM " + DBHelper.TABLE_NAME
