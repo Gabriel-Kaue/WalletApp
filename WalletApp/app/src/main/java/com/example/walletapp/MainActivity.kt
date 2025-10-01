@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun cadastrar(view: View){
-        startActivity(Intent(this, cadastro::class.java))
+        startActivity(Intent(this, CadrastraOperacoes::class.java))
     }
     fun extrato(view: View){
-        //startActivity(Intent(this, extrato::class.java))
+        startActivity(Intent(this, Extrato::class.java))
     }
     fun sair(view: View){
         finish()
