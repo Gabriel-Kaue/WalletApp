@@ -65,7 +65,8 @@
             android:textSize="20sp"
             android:layout_marginBottom="100dp"/>
         <Button
-            android:id="@+id/button4"
+
+            android:id="@+id/btnsair"
             android:layout_width="156dp"
             android:layout_height="54dp"
             android:onClick="sair"
