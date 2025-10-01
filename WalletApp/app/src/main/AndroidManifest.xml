@@ -15,6 +15,12 @@
             android:name=".cadastro"
             android:exported="false" />
         <activity
+            android:name=".Extrato"
+            android:exported="false" />
+        <activity
+            android:name=".CadrastraOperacoes"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
